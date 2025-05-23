@@ -1136,44 +1136,58 @@
                 max-width: 100%;
             }
 
-            /* Specific adjustments for board member cards on small screens */
-            .board-members-grid {
-                gap: 1rem; /* Reduce gap between cards */
+            /* Specific override for board-members-grid to show 3 columns */
+            #board-members .board-members-grid {
+                display: grid;
+                /* Change to grid layout */
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                /* Adjust min-width to fit 3 cards */
+                gap: 0.5rem;
+                /* Smaller gap */
             }
 
-            .member-card {
-                padding: 1rem; /* Smaller padding for compact look */
-                flex: 1 1 100%; /* Ensure full width on small screens */
-                max-width: 100%;
+            /* Adjust member card styles specifically for board members on mobile */
+            #board-members .member-card {
+                padding: 0.5rem;
+                /* Make cards more compact */
+                /* Remove flex and max-width as grid handles sizing */
+                flex: none;
+                max-width: none;
             }
 
-            .member-card img {
-                width: 80px; /* Smaller image size */
-                height: 80px;
-                margin-bottom: 0.8rem; /* Reduced margin */
+            #board-members .member-card img {
+                width: 60px;
+                /* Smaller image */
+                height: 60px;
+                margin-bottom: 0.5rem;
             }
 
-            .member-card h3 {
-                font-size: 1.3rem; /* Smaller font for name */
+            #board-members .member-card h3 {
+                font-size: 0.9rem;
+                /* Smaller name font */
             }
 
-            .member-role {
-                font-size: 0.9rem; /* Smaller font for role */
-                margin-bottom: 0.8rem; /* Reduced margin */
+            #board-members .member-role {
+                font-size: 0.75rem;
+                /* Smaller role font */
+                margin-bottom: 0.5rem;
             }
 
-            .member-description {
-                font-size: 0.85rem; /* Smaller font for description */
-                margin-bottom: 1rem; /* Reduced margin */
+            #board-members .member-description {
+                display: none;
+                /* Hide description for space */
             }
 
-            .member-social-links {
-                margin-top: 8px; /* Reduced margin */
-                gap: 10px; /* Reduced gap between icons */
+            #board-members .member-social-links {
+                margin-top: 0.3rem;
+                /* Smaller margin */
+                gap: 0.3rem;
+                /* Smaller gap */
             }
 
-            .member-social-links a {
-                font-size: 1.2em; /* Smaller icon size */
+            #board-members .member-social-links a {
+                font-size: 0.9em;
+                /* Smaller icons */
             }
 
 
