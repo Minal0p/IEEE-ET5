@@ -575,11 +575,12 @@
             font-size: 1rem;
         }
 
-        .member-description {
+        /* Removed .member-description styling as the element will be removed */
+        /* .member-description {
             font-size: 0.9rem;
             color: #555;
             margin-bottom: 1.5rem;
-        }
+        } */
 
         /* Styles for social link icons when placed below */
         .member-social-links {
@@ -1048,16 +1049,16 @@
             }
         }
 
-        /* For screens between 420px and 768px (Larger phones, smaller tablets) - 3 columns */
-        @media (min-width: 420px) and (max-width: 768px) {
+        /* For screens between 375px and 768px (Standard phones and larger) - 3 columns */
+        @media (min-width: 375px) and (max-width: 768px) {
             .member-card {
                 flex: 1 1 calc((100% - 4rem) / 3); /* 3 columns with 2 * 2rem gaps */
                 max-width: calc((100% - 4rem) / 3);
             }
         }
 
-        /* For screens between 321px and 419px (Standard phones) - 2 columns */
-        @media (min-width: 321px) and (max-width: 419px) {
+        /* For screens between 321px and 374px (Smaller standard phones) - 2 columns */
+        @media (min-width: 321px) and (max-width: 374px) {
             .member-card {
                 flex: 1 1 calc((100% - 2rem) / 2); /* 2 columns with 1 * 2rem gap */
                 max-width: calc((100% - 2rem) / 2);
@@ -1117,16 +1118,16 @@
             .member-role {
                 font-size: 0.9rem;
                 /* Smaller font for role */
-                margin-bottom: 0.8rem;
-                /* Reduced margin */
+                /* Removed margin-bottom as description is removed */
+                /* margin-bottom: 0.8rem; */
             }
 
-            .member-description {
+            /* Removed .member-description styling as the element will be removed */
+            /* .member-description {
                 font-size: 0.85rem;
-                /* Smaller font for description */
+                color: #555;
                 margin-bottom: 1rem;
-                /* Reduced margin */
-            }
+            } */
 
             .member-social-links {
                 margin-top: 8px;
@@ -1291,9 +1292,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=Abdelmaseh+Boles" alt="Abdelmaseh Boles Photo" loading="lazy">
                     <h3>Abdelmaseh Boles</h3>
                     <p class="member-role">Chair</p>
-                    <p class="member-description">
-                        An inspiring and innovative leader who guides the branch towards achieving its ambitious goals.
-                    </p>
                     <div class="member-social-links">
                         <a href="https://www.facebook.com/Se7aSherif" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Abdelmaseh Sherif"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/in/abdelmaseh-sherif-placeholder" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Abdelmaseh Sherif"><i class="fab fa-linkedin-in"></i></a>
@@ -1303,9 +1301,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=Dina+Rostom" alt="Dina Rostom Photo" loading="lazy">
                     <h3>Dina Rostom</h3>
                     <p class="member-role">Counselor</p>
-                    <p class="member-description">
-                        Supports the vision and contributes effectively to the implementation of initiatives.
-                    </p>
                     <div class="member-social-links">
                         <a href="https://www.facebook.com/dina.zaki.58" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Dina Rostom"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/in/dina-rostom-b5980b257?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD9NYLUB-VspTGfD7YVDUb2xvZr-16E4lqs&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B97Q1fV3HRvupVFc%2F%2B51wsg%3D%3D" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Dina Rostom"><i class="fab fa-linkedin-in"></i></a>
@@ -1315,9 +1310,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=Mohamed+Abd+all+nasser" alt="Mohamed Abd all nasser Photo" loading="lazy">
                     <h3>Mohamed Abd all nasser</h3>
                     <p class="member-role">Secretary</p>
-                    <p class="member-description">
-                        Responsible for organizing meetings and documenting decisions.
-                    </p>
                     <div class="member-social-links">
                         <a href="#" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Mohamed Abd all nasser"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Mohamed Abd all nasser"><i class="fab fa-linkedin-in"></i></a>
@@ -1327,9 +1319,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=AbdElmoumen+Mansour" alt="AbdElmoumen Mansour Photo" loading="lazy">
                     <h3>AbdElmoumen Mansour</h3>
                     <p class="member-role">Treasurer</p>
-                    <p class="member-description">
-                        Manages the branch's financial affairs efficiently and transparently.
-                    </p>
                     <div class="member-social-links">
                         <a href="#" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for AbdElmoumen Mansour"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for AbdElmoumen Mansour"><i class="fab fa-linkedin-in"></i></a>
@@ -1339,9 +1328,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=Osama+Maher" alt="Osama Maher Photo" loading="lazy">
                     <h3>Osama Maher</h3>
                     <p class="member-role">Vice Chair</p>
-                    <p class="member-description">
-                        Works to build and strengthen the branch's relationships with the external community.
-                    </p>
                     <div class="member-social-links">
                         <a href="https://www.facebook.com/Osama.MHAMS" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Osama Maher"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/in/osama-maher-placeholder" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Osama Maher"><i class="fab fa-linkedin-in"></i></a>
@@ -1351,9 +1337,6 @@
                     <img src="https://placehold.co/150x150/00629B/FFFFFF?text=Position+Vacant" alt="Webmaster Position Vacant" loading="lazy">
                     <h3>Position Vacant</h3>
                     <p class="member-role">Webmaster</p>
-                    <p class="member-description">
-                        This position is currently vacant. We are looking for a dedicated individual to join our team.
-                    </p>
                     <div class="member-social-links">
                         <a href="#" class="social-link" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
