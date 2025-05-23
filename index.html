@@ -643,6 +643,10 @@
       color: var(--dark);
     }
 
+    .contact-method p {
+      margin-bottom: 1.5rem;
+    }
+
     .contact-form {
       flex: 1 1 400px;
       max-width: 500px;
@@ -1018,9 +1022,9 @@
           <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#board-members">Board Team</a></li>
-          <li><a href="#membership">Membership</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#resources">Resources</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
           <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
           <li><a href="#contact-us">Contact Us</a></li>
         </ul>
@@ -1122,135 +1126,6 @@
         </div>
     </section>
 
-    <section id="membership" class="animate-on-scroll">
-      <h2 class="section-title">Membership</h2>
-      <p style="text-align:center; max-width: 800px; margin: auto;">
-        Join the IEEE ET5 community and benefit from exclusive resources and events for IEEE members. Be part of a global network of engineers and scientists.
-      </p>
-      <div class="membership-steps">
-        <div class="step animate-on-scroll">
-          <div class="step-number">1</div>
-          <h3>Registration</h3>
-          <p>Register through the official IEEE website and choose ET5 as your student branch. A simple and direct process.</p>
-        </div>
-        <div class="step animate-on-scroll">
-          <div class="step-number">2</div>
-          <h3>Payment</h3>
-          <p>Complete the payment process through the website's electronic system. Secure and multiple payment options are available.</p>
-        </div>
-        <div class="step animate-on-scroll">
-          <div class="step-number">3</div>
-          <h3>Join</h3>
-          <p>Get ready to participate in activities and build a strong network! Start your journey with us today.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="events" class="animate-on-scroll">
-      <h2 class="section-title">Events</h2>
-      <p style="text-align:center; margin-bottom: 2rem;">Enjoy an unforgettable educational and interactive experience with our monthly events and specialized workshops.</p>
-      <div class="events-container">
-        <div class="event-card animate-on-scroll">
-          <div class="event-image">
-            <img src="https://picsum.photos/400/200?random=1 " alt="AI Workshop" loading="lazy">
-          </div>
-          <div class="event-details">
-            <div class="event-date">Oct 20</div>
-            <h3>AI Workshop</h3>
-            <p>Discover the fundamentals of Artificial Intelligence and its applied history in industry, with practical applications.</p>
-            <a href="#" class="cta-button secondary">Register Now</a>
-          </div>
-        </div>
-        <div class="event-card animate-on-scroll">
-          <div class="event-image">
-            <img src="https://picsum.photos/400/200?random=2 " alt="Programming Hackathon" loading="lazy">
-          </div>
-          <div class="event-details">
-            <div class="event-date">Nov 15</div>
-            <h3>Programming Hackathon</h3>
-            <p>A one-day challenge to solve real-world problems using modern technology, with valuable prizes for the top places.</p>
-            <a href="#" class="cta-button secondary">Register Now</a>
-          </div>
-        </div>
-        <div class="event-card animate-on-scroll">
-          <div class="event-image">
-            <img src="https://picsum.photos/400/200?random=3 " alt="Cybersecurity Seminar" loading="lazy">
-          </div>
-          <div class="event-details">
-            <div class="event-date">Dec 10</div>
-            <h3>Cybersecurity Seminar</h3>
-            <p>Learn about the latest cyber threats and how to protect your data and systems.</p>
-            <a href="#" class="cta-button secondary">Register Now</a>
-          </div>
-        </div>
-        <div class="event-card animate-on-scroll">
-          <div class="event-image">
-            <img src="https://picsum.photos/400/200?random=4 " alt="Field Trip" loading="lazy">
-          </div>
-          <div class="event-details">
-            <div class="event-date">Jan 05</div>
-            <h3>Field Trip</h3>
-            <p>A visit to a leading technology company to learn about the real work environment.</p>
-            <a href="#" class="cta-button secondary">Register Now</a>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 3rem;">
-        <a href="#" class="cta-button">View All Events</a>
-        <button id="generateEventIdeaBtn" class="cta-button secondary" style="margin-left: 1rem;">Suggest New Event Idea ✨</button> </div>
-      <div id="loadingIndicator" style="display:none; margin-top: 1rem; color: var(--primary); font-weight: bold;">
-        Generating idea... <i class="fas fa-spinner fa-spin"></i>
-      </div>
-      <div id="generatedEventIdea" style="margin-top: 1.5rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left; display: none;">
-        </div>
-    </section>
-
-    <section id="resources" class="animate-on-scroll">
-      <h2 class="section-title">Educational Resources</h2>
-      <p style="text-align:center; margin-bottom: 2rem;">Benefit from the valuable educational resources we provide to support your academic and professional journey.</p>
-      <div class="resources-grid">
-        <div class="resource-card animate-on-scroll">
-          <h3>IEEE Xplore Digital Library</h3>
-          <p>Access thousands of research papers and scientific journals in various technical disciplines, an indispensable resource for researchers.</p>
-          <a href="https://ieeexplore.ieee.org/Xplore/home.jsp " target="_blank">Discover Now <i class="fas fa-external-link-alt"></i></a>
-        </div>
-        <div class="resource-card animate-on-scroll">
-          <h3>Advanced Training Courses</h3>
-          <p>The IEEE Learn platform provides specialized and certified courses in modern engineering and technology fields.</p>
-          <a href="https://learn.ieee.org/ " target="_blank">Start Learning <i class="fas fa-external-link-alt"></i></a>
-        </div>
-        <div class="resource-card animate-on-scroll">
-          <h3>Free Programming Tools</h3>
-          <p>Use powerful tools like MATLAB Onramp, Python, Git, and others to support your projects and develop your skills.</p>
-          <a href="#">Discover Tools <i class="fas fa-arrow-right"></i></a> </div>
-        <div class="resource-card animate-on-scroll">
-          <h3>Publications and Articles</h3>
-          <p>A collection of exclusive articles and publications for IEEE members, covering the latest developments in the industry.</p>
-          <a href="#">Read More <i class="fas fa-arrow-right"></i></a> </div>
-      </div>
-      <div style="margin-top: 3rem;">
-        <a href="#" class="cta-button">Browse All Resources</a>
-      </div>
-    </section>
-
-    <!-- <section id="career-path-suggester" class="animate-on-scroll">
-      <h2 class="section-title">Discover Your Career Path</h2>
-      <p style="text-align:center; margin-bottom: 2rem;">
-        Enter your interests or areas that pique your curiosity, and we will suggest potential career paths and relevant IEEE fields.
-      </p>
-      <div style="max-width: 600px; margin: auto; text-align: left;"> <div class="form-group">
-          <label for="interestsInput">My interests (e.g., Artificial Intelligence, Robotics, Renewable Energy):</label>
-          <textarea id="interestsInput" name="interests" rows="4" required placeholder="Type your interests here..."></textarea>
-        </div>
-        <button id="suggestCareerPathBtn" class="cta-button">Suggest Career Path ✨</button>
-        <div id="careerLoadingIndicator" style="display:none; margin-top: 1rem; color: var(--primary); font-weight: bold;">
-          Generating suggestions... <i class="fas fa-spinner fa-spin"></i>
-        </div>
-        <div id="generatedCareerPath" style="margin-top: 1.5rem; padding: 1.5rem; background: var(--light); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left; display: none;">
-          </div>
-      </div>
-    </section> -->
-
     <section id="contact-us" class="animate-on-scroll">
       <h2 class="section-title">Contact Us</h2>
       <p class="section-description">
@@ -1310,9 +1185,9 @@
           <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#board-members">Board Team</a></li>
-          <li><a href="#membership">Membership</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#resources">Resources</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
           <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
           <li><a href="#contact-us">Contact Us</a></li>
         </ul>
@@ -1545,6 +1420,12 @@
         }
       });
     }
+
+    // Gemini API Integration for Career Path Suggester (Removed functionality)
+    // The section with id="career-path-suggester" is commented out in the HTML.
+    // Therefore, the JavaScript related to it is no longer needed or will not execute.
+    // Keeping the code commented out here for reference, but it's effectively removed.
+
   </script>
 </body>
 </html>
