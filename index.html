@@ -238,35 +238,24 @@
         }
 
         main {
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: auto;
+            padding: 0; /* Remove padding from main to allow sections to span full width */
+            max-width: 100%; /* Make main take full width */
+            margin: 0; /* Remove margin from main */
             position: relative;
-            /* For z-index stacking */
             z-index: 2;
-            /* Ensure main content is above body background */
             background-color: transparent;
-            /* Allow body background to show through */
         }
 
         section {
-            padding: 4rem 2rem;
+            padding: 4rem 2rem; /* Keep existing padding for content inside sections */
             direction: ltr;
-            /* Ensure LTR for content */
             text-align: center;
-            /* Center section content */
             position: relative;
-            /* For z-index stacking */
             z-index: 2;
-            /* Ensure section content is above body background */
             background-color: white;
-            /* Solid background to cover body pattern */
-            border-radius: 10px;
-            /* Rounded corners for sections */
+            border-radius: 0; /* Remove border-radius for full width sections */
             margin-bottom: 2rem;
-            /* Space between sections */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            /* Subtle shadow for sections */
         }
 
         /* Hero Section Specific Styles and Animations */
@@ -274,41 +263,31 @@
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             color: white;
             min-height: 80vh;
-            /* Make hero section taller */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            /* Crucial for pseudo-elements */
             overflow: hidden;
-            /* Hide overflow from animations */
             z-index: 2;
-            /* Ensure content is above body background */
-            border-radius: 10px;
-            /* Rounded corners for hero */
+            border-radius: 0; /* Remove border-radius for full width */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            /* More prominent shadow for hero */
         }
 
         #home .section-title {
             color: white;
-            /* White title for hero section */
             animation: fadeInUp 1s ease-out forwards;
-            /* Animation for title */
             animation-delay: 0.2s;
         }
 
         #home p {
             color: rgba(255, 255, 255, 0.9);
             animation: fadeInUp 1s ease-out forwards;
-            /* Animation for paragraph */
             animation-delay: 0.4s;
         }
 
         #home .cta-button {
             animation: fadeInUp 1s ease-out forwards;
-            /* Animation for button */
             animation-delay: 0.6s;
         }
 
@@ -322,9 +301,7 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            /* Below content */
             opacity: 0.15;
-            /* Subtle */
         }
 
         #home::before {
@@ -341,7 +318,6 @@
                     transparent 20px);
             animation: panBackground 30s linear infinite;
             background-size: 40px 40px;
-            /* Size of the repeating pattern */
         }
 
         .section-title {
@@ -351,7 +327,6 @@
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
-            /* Space for underline */
         }
 
         .section-title::after {
@@ -361,7 +336,6 @@
             height: 4px;
             background: var(--secondary);
             bottom: 0;
-            /* Position at the bottom of the title */
             left: 25%;
             border-radius: 50px;
         }
@@ -373,12 +347,14 @@
         .resources-grid,
         .contact-info-grid,
         .board-members-grid {
-            /* Added board-members-grid */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
+            max-width: 1200px; /* Keep max-width for content inside sections */
+            margin-left: auto; /* Center content inside sections */
+            margin-right: auto; /* Center content inside sections */
         }
 
         .about-card,
@@ -387,7 +363,6 @@
         .resource-card,
         .contact-method,
         .member-card {
-            /* Added member-card */
             flex: 1 1 280px;
             max-width: 350px;
             background: white;
@@ -396,13 +371,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: left;
-            /* Align to left for LTR */
             position: relative;
             overflow: hidden;
             opacity: 0;
-            /* Initial state for animate-on-scroll */
             transform: translateY(30px) scale(0.95);
-            /* Initial state for animate-on-scroll */
         }
 
         /* Staggered animation for cards */
@@ -414,7 +386,6 @@
             transition-delay: 0s;
         }
 
-        /* Added member-card */
         .about-content .about-card:nth-child(2),
         .membership-steps .step:nth-child(2),
         .events-container .event-card:nth-child(2),
@@ -423,7 +394,6 @@
             transition-delay: 0.1s;
         }
 
-        /* Added member-card */
         .about-content .about-card:nth-child(3),
         .membership-steps .step:nth-child(3),
         .events-container .event-card:nth-child(3),
@@ -432,7 +402,6 @@
             transition-delay: 0.2s;
         }
 
-        /* Added member-card */
         .about-content .about-card:nth-child(4),
         .membership-steps .step:nth-child(4),
         .events-container .event-card:nth-child(4),
@@ -441,14 +410,12 @@
             transition-delay: 0.3s;
         }
 
-        /* Added member-card */
         .about-card.animated,
         .step.animated,
         .event-card.animated,
         .resource-card.animated,
         .contact-method.animated,
         .member-card.animated {
-            /* Added member-card */
             opacity: 1;
             transform: translateY(0) scale(1);
         }
@@ -458,9 +425,7 @@
         .event-card:hover,
         .resource-card:hover,
         .member-card:hover {
-            /* Added member-card */
             transform: translateY(-8px) scale(1.02);
-            /* More pronounced hover effect */
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
         }
 
@@ -469,7 +434,6 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            /* For LTR */
             width: 40px;
             height: 40px;
             background: var(--secondary);
@@ -487,14 +451,12 @@
             margin-bottom: 1rem;
             color: var(--primary);
             padding-left: 50px;
-            /* Adjust padding for LTR */
         }
 
         /* Event Cards */
         .event-card {
             padding: 0;
             text-align: left;
-            /* Align to left for LTR */
         }
 
         .event-image {
@@ -526,7 +488,6 @@
             position: absolute;
             top: -20px;
             right: 15px;
-            /* For LTR */
             background: var(--primary);
             color: white;
             padding: 0.4rem 0.8rem;
@@ -550,11 +511,8 @@
         /* Resource Cards */
         .resource-card {
             border-left: 4px solid var(--primary);
-            /* For LTR */
             border-right: none;
-            /* Override RTL */
             text-align: left;
-            /* Align to left for LTR */
         }
 
         .resource-card h3 {
@@ -573,15 +531,12 @@
         .resource-card a:hover {
             color: var(--dark);
             transform: translateX(8px);
-            /* More pronounced slide effect for LTR */
         }
 
         /* Board Members Section Styling */
         .member-card {
             text-align: center;
-            /* Center content within member cards */
             padding: 1.5rem;
-            /* Adjust padding for member cards */
         }
 
         .member-card img {
@@ -591,14 +546,12 @@
             object-fit: cover;
             margin-bottom: 1rem;
             border: 4px solid var(--primary);
-            /* Border around member image */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
         .member-card:hover img {
             transform: scale(1.05);
-            /* Slightly enlarge image on hover */
         }
 
         .member-card h3 {
@@ -623,42 +576,33 @@
         /* Styles for social link icons when placed below */
         .member-social-links {
             margin-top: 10px;
-            /* Space from the position text */
             display: flex;
             justify-content: center;
-            /* Center the icons horizontally */
             gap: 15px;
-            /* Space between icons */
         }
 
         .member-social-links a {
             color: #3b5998;
-            /* Default color for social icons (Facebook blue) */
             font-size: 1.5em;
-            /* Adjust icon size */
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .member-social-links a.facebook-icon {
             color: #3b5998;
-            /* Facebook blue */
         }
 
         .member-social-links a.linkedin-icon {
             color: #0a66c2;
-            /* LinkedIn blue */
         }
 
         .member-social-links a:hover {
             transform: scale(1.2);
-            /* Slightly enlarge on hover */
         }
 
 
         /* Call to Action Buttons */
         .cta-button {
             background: var(--primary);
-            /* Fallback */
             color: white;
             border: none;
             padding: 0.8rem 2rem;
@@ -672,19 +616,14 @@
             overflow: hidden;
             z-index: 1;
 
-            /* New: Gradient background */
             background-image: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
             background-size: 200% auto;
-            /* For hover effect */
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-            /* Subtle text shadow */
         }
 
         .cta-button:hover {
             background-position: right center;
-            /* Shift gradient on hover */
             background-image: linear-gradient(to right, var(--dark) 0%, var(--primary) 100%);
-            /* Darker gradient on hover */
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
@@ -693,7 +632,6 @@
         .cta-button.pulse {
             animation: pulse 2s infinite;
             box-shadow: 0 0 0 0 rgba(0, 98, 155, 0.7);
-            /* Initial pulse shadow */
             animation: pulse-shadow 2s infinite;
         }
 
@@ -715,13 +653,10 @@
         .ai-helper-feature .cta-button {
             margin-top: 1rem;
             width: auto;
-            /* Allow button to size naturally */
             display: block;
-            /* Make button full width of its container */
             margin-left: auto;
             margin-right: auto;
             min-width: 200px;
-            /* Ensure a minimum width for consistency */
         }
 
         /* Contact Section */
@@ -746,7 +681,6 @@
             justify-content: center;
             align-items: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Add transition for hover */
         }
 
         .contact-method i {
@@ -754,14 +688,11 @@
             color: var(--primary);
             margin-bottom: 1rem;
             transition: color 0.3s ease, transform 0.3s ease;
-            /* Add transition for icon hover */
         }
 
         .contact-method:hover i {
             color: var(--secondary);
-            /* Change icon color on hover */
             transform: scale(1.1);
-            /* Slightly enlarge icon on hover */
         }
 
         .contact-method h3 {
@@ -781,7 +712,6 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: left;
-            /* Align to left for LTR */
         }
 
         .form-group {
@@ -804,7 +734,6 @@
             font-size: 1rem;
             transition: all 0.3s ease;
             direction: ltr;
-            /* Ensure LTR for input fields */
         }
 
         .form-group input:focus,
@@ -855,7 +784,6 @@
             color: white;
             padding: 3rem 0 1rem;
             text-align: left;
-            /* Align to left for LTR */
         }
 
         .footer-container {
@@ -918,14 +846,12 @@
             border-radius: 50%;
             color: white;
             transition: all 0.3s ease, transform 0.2s ease;
-            /* Added transform to transition */
         }
 
         .social-links a:hover {
             background: var(--secondary);
             color: var(--dark);
             transform: translateY(-5px) scale(1.1);
-            /* Lift and scale on hover */
         }
 
         .copyright {
@@ -938,12 +864,10 @@
         }
 
         /* Animations */
-        /* General animate-on-scroll (now with scale) */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px) scale(0.95);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            /* Slower and smoother */
         }
 
         .animate-on-scroll.animated {
@@ -951,7 +875,6 @@
             transform: translateY(0) scale(1);
         }
 
-        /* Hero section specific animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1049,7 +972,6 @@
             position: absolute;
             top: 10px;
             right: 15px;
-            /* For LTR */
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
@@ -1136,58 +1058,44 @@
                 max-width: 100%;
             }
 
-            /* Specific override for board-members-grid to show 3 columns */
-            #board-members .board-members-grid {
-                display: grid;
-                /* Change to grid layout */
-                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-                /* Adjust min-width to fit 3 cards */
-                gap: 0.5rem;
-                /* Smaller gap */
+            /* Specific adjustments for board member cards on small screens */
+            .board-members-grid {
+                gap: 1rem;
             }
 
-            /* Adjust member card styles specifically for board members on mobile */
-            #board-members .member-card {
-                padding: 0.5rem;
-                /* Make cards more compact */
-                /* Remove flex and max-width as grid handles sizing */
-                flex: none;
-                max-width: none;
+            .member-card {
+                padding: 1rem;
+                flex: 1 1 100%;
+                max-width: 100%;
             }
 
-            #board-members .member-card img {
-                width: 60px;
-                /* Smaller image */
-                height: 60px;
-                margin-bottom: 0.5rem;
+            .member-card img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0.8rem;
             }
 
-            #board-members .member-card h3 {
+            .member-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .member-role {
                 font-size: 0.9rem;
-                /* Smaller name font */
+                margin-bottom: 0.8rem;
             }
 
-            #board-members .member-role {
-                font-size: 0.75rem;
-                /* Smaller role font */
-                margin-bottom: 0.5rem;
+            .member-description {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
             }
 
-            #board-members .member-description {
-                display: none;
-                /* Hide description for space */
+            .member-social-links {
+                margin-top: 8px;
+                gap: 10px;
             }
 
-            #board-members .member-social-links {
-                margin-top: 0.3rem;
-                /* Smaller margin */
-                gap: 0.3rem;
-                /* Smaller gap */
-            }
-
-            #board-members .member-social-links a {
-                font-size: 0.9em;
-                /* Smaller icons */
+            .member-social-links a {
+                font-size: 1.2em;
             }
 
 
@@ -1214,76 +1122,49 @@
         /* Specific adjustments for the "Join Our Family" section */
         .join-family {
             background-color: var(--primary);
-            /* Use primary color for background */
             color: white;
-            /* White text for contrast */
             padding: 6rem 2rem;
-            /* Increased padding for more vertical space */
-            border-radius: 15px;
-            /* More rounded corners */
+            border-radius: 0; /* Remove border-radius for full width */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            /* More prominent shadow */
             margin-top: 4rem;
-            /* Add more space above it */
             margin-bottom: 4rem;
-            /* Add more space below it */
             display: flex;
-            /* Use flexbox for centering content */
             flex-direction: column;
-            /* Stack children vertically */
             align-items: center;
-            /* Center items horizontally */
             justify-content: center;
-            /* Center items vertically */
         }
 
         .join-family .section-title {
             color: white;
-            /* Ensure title is white */
             margin-bottom: 1.5rem;
-            /* Adjust margin */
         }
 
         .join-family .section-title::after {
             background: var(--secondary);
-            /* Use secondary color for underline */
         }
 
         .join-family p {
             color: rgba(255, 255, 255, 0.9);
-            /* Slightly transparent white for paragraph */
             max-width: 700px;
-            /* Constrain paragraph width */
             margin-bottom: 2.5rem;
-            /* More space below paragraph */
             font-size: 1.1rem;
-            /* Slightly larger font size */
             line-height: 1.8;
-            /* Better line height for readability */
         }
 
         .join-family .cta-button {
             background-image: linear-gradient(to right, var(--secondary) 0%, #FFB300 100%);
-            /* Gold gradient for button */
             color: var(--dark);
-            /* Dark text for contrast on gold button */
             font-size: 1.1rem;
-            /* Larger font for button */
             padding: 1rem 3rem;
-            /* Larger padding for button */
             border-radius: 50px;
-            /* Fully rounded button */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            /* Stronger button shadow */
             transition: all 0.3s ease;
         }
 
         .join-family .cta-button:hover {
             background-position: right center;
             background-image: linear-gradient(to right, #FFB300 0%, var(--secondary) 100%);
-            /* Reverse gradient on hover */
             transform: translateY(-5px) scale(1.05);
-            /* More pronounced lift and scale */
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
         }
     </style>
@@ -1309,10 +1190,9 @@
                     <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#board-members">Board Team</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li> <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/">Our Family</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
                     <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
@@ -1435,6 +1315,11 @@
                     </div>
                 </div>
             </div>
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family" class="cta-button">
+                    Know Our Family
+                </a>
+            </div>
         </section>
 
         <section class="join-family animate-on-scroll">
@@ -1509,10 +1394,10 @@
                     <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#board-members">Board Team</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/">Our Family</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
                     <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
