@@ -1075,9 +1075,8 @@
             .member-card {
                 padding: 1rem;
                 /* Smaller padding for compact look */
-                flex: 1 1 calc(33.33% - 1.33rem);
-                /* Changed to 3 columns */
-                max-width: calc(33.33% - 1.33rem);
+                flex: 1 1 calc((100% - 2rem) / 3); /* Changed to 3 columns with correct gap calculation */
+                max-width: calc((100% - 2rem) / 3); /* Ensures they can shrink to fit 3 in a row */
             }
 
             .member-card img {
