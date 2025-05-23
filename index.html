@@ -238,22 +238,22 @@
         }
 
         main {
-            padding: 0; /* Remove padding from main to allow sections to span full width */
-            max-width: 100%; /* Make main take full width */
-            margin: 0; /* Remove margin from main */
+            padding: 2rem 1rem; /* Re-added padding for main content */
+            max-width: 1200px; /* Re-added max-width for main content */
+            margin: auto; /* Centered main content */
             position: relative;
             z-index: 2;
             background-color: transparent;
         }
 
         section {
-            padding: 4rem 2rem; /* Keep existing padding for content inside sections */
+            padding: 4rem 2rem;
             direction: ltr;
             text-align: center;
             position: relative;
             z-index: 2;
             background-color: white;
-            border-radius: 0; /* Remove border-radius for full width sections */
+            border-radius: 10px; /* Re-added border-radius for sections */
             margin-bottom: 2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
@@ -270,7 +270,7 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
-            border-radius: 0; /* Remove border-radius for full width */
+            border-radius: 10px; /* Re-added border-radius for hero */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
@@ -352,9 +352,12 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
-            max-width: 1200px; /* Keep max-width for content inside sections */
-            margin-left: auto; /* Center content inside sections */
-            margin-right: auto; /* Center content inside sections */
+            max-width: 1200px;
+            /* Keep max-width for content inside sections */
+            margin-left: auto;
+            /* Center content inside sections */
+            margin-right: auto;
+            /* Center content inside sections */
         }
 
         .about-card,
@@ -1061,41 +1064,54 @@
             /* Specific adjustments for board member cards on small screens */
             .board-members-grid {
                 gap: 1rem;
+                /* Reduce gap between cards */
             }
 
             .member-card {
                 padding: 1rem;
-                flex: 1 1 100%;
-                max-width: 100%;
+                /* Smaller padding for compact look */
+                flex: 1 1 calc(50% - 1rem);
+                /* Allow two columns on tablets */
+                max-width: calc(50% - 1rem);
             }
 
             .member-card img {
                 width: 80px;
+                /* Smaller image size */
                 height: 80px;
                 margin-bottom: 0.8rem;
+                /* Reduced margin */
             }
 
             .member-card h3 {
                 font-size: 1.3rem;
+                /* Smaller font for name */
             }
 
             .member-role {
                 font-size: 0.9rem;
+                /* Smaller font for role */
                 margin-bottom: 0.8rem;
+                /* Reduced margin */
             }
 
             .member-description {
                 font-size: 0.85rem;
+                /* Smaller font for description */
                 margin-bottom: 1rem;
+                /* Reduced margin */
             }
 
             .member-social-links {
                 margin-top: 8px;
+                /* Reduced margin */
                 gap: 10px;
+                /* Reduced gap between icons */
             }
 
             .member-social-links a {
                 font-size: 1.2em;
+                /* Smaller icon size */
             }
 
 
@@ -1119,12 +1135,21 @@
             }
         }
 
+        /* New media query for very small phones (single column) */
+        @media (max-width: 550px) {
+            .member-card {
+                flex: 1 1 100%;
+                /* Force single column on very small screens */
+                max-width: 100%;
+            }
+        }
+
         /* Specific adjustments for the "Join Our Family" section */
         .join-family {
             background-color: var(--primary);
             color: white;
             padding: 6rem 2rem;
-            border-radius: 0; /* Remove border-radius for full width */
+            border-radius: 15px; /* Re-added border-radius for join-family section */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin-top: 4rem;
             margin-bottom: 4rem;
@@ -1190,7 +1215,8 @@
                     <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#board-members">Board Team</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li> <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
