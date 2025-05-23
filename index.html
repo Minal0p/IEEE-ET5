@@ -238,9 +238,12 @@
         }
 
         main {
-            padding: 2rem 1rem; /* Re-added padding for main content */
-            max-width: 1200px; /* Re-added max-width for main content */
-            margin: auto; /* Centered main content */
+            padding: 2rem 1rem;
+            /* Re-added padding for main content */
+            max-width: 1200px;
+            /* Re-added max-width for main content */
+            margin: auto;
+            /* Centered main content */
             position: relative;
             z-index: 2;
             background-color: transparent;
@@ -253,7 +256,8 @@
             position: relative;
             z-index: 2;
             background-color: white;
-            border-radius: 10px; /* Re-added border-radius for sections */
+            border-radius: 10px;
+            /* Re-added border-radius for sections */
             margin-bottom: 2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
@@ -270,7 +274,8 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
-            border-radius: 10px; /* Re-added border-radius for hero */
+            border-radius: 10px;
+            /* Re-added border-radius for hero */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
@@ -1061,7 +1066,7 @@
                 max-width: 100%;
             }
 
-            /* Specific adjustments for board member cards on small screens */
+            /* Specific adjustments for board member cards on mobile (3 columns) */
             .board-members-grid {
                 gap: 1rem;
                 /* Reduce gap between cards */
@@ -1070,9 +1075,9 @@
             .member-card {
                 padding: 1rem;
                 /* Smaller padding for compact look */
-                flex: 1 1 calc(50% - 1rem);
-                /* Allow two columns on tablets */
-                max-width: calc(50% - 1rem);
+                flex: 1 1 calc(33.33% - 0.66rem);
+                /* Changed to 3 columns */
+                max-width: calc(33.33% - 0.66rem);
             }
 
             .member-card img {
@@ -1149,7 +1154,8 @@
             background-color: var(--primary);
             color: white;
             padding: 6rem 2rem;
-            border-radius: 15px; /* Re-added border-radius for join-family section */
+            border-radius: 15px;
+            /* Re-added border-radius for join-family section */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin-top: 4rem;
             margin-bottom: 4rem;
