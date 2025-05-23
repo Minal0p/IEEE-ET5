@@ -1042,19 +1042,11 @@
             }
         }
 
-        /* For screens between 375px and 768px (Standard phones and larger) - 3 columns */
-        @media (min-width: 375px) and (max-width: 768px) {
+        /* For screens between 321px and 768px (Standard phones and larger) - 3 columns */
+        @media (min-width: 321px) and (max-width: 768px) {
             .member-card {
                 flex: 1 1 calc((100% - 4rem) / 3); /* 3 columns with 2 * 2rem gaps */
                 max-width: calc((100% - 4rem) / 3);
-            }
-        }
-
-        /* For screens between 321px and 374px (Smaller standard phones) - 2 columns */
-        @media (min-width: 321px) and (max-width: 374px) {
-            .member-card {
-                flex: 1 1 calc((100% - 2rem) / 2); /* 2 columns with 1 * 2rem gap */
-                max-width: calc((100% - 2rem) / 2);
             }
         }
 
