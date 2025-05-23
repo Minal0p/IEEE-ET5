@@ -1048,26 +1048,26 @@
             }
         }
 
-        /* For screens between 577px and 768px (3 columns) */
-        @media (min-width: 577px) and (max-width: 768px) {
+        /* For screens between 481px and 768px (Larger phones in landscape, smaller tablets) - 3 columns */
+        @media (min-width: 481px) and (max-width: 768px) {
             .member-card {
-                flex: 1 1 calc((100% - 4rem) / 3); /* 3 columns with 2rem gap from .board-members-grid */
+                flex: 1 1 calc((100% - 4rem) / 3); /* 3 columns with 2 * 2rem gaps */
                 max-width: calc((100% - 4rem) / 3);
             }
         }
 
-        /* For screens between 321px and 576px (2 columns) */
-        @media (min-width: 321px) and (max-width: 576px) {
+        /* For screens between 321px and 480px (Standard phones) - 2 columns */
+        @media (min-width: 321px) and (max-width: 480px) {
             .member-card {
-                flex: 1 1 calc((100% - 2rem) / 2); /* 2 columns with 2rem gap from .board-members-grid */
+                flex: 1 1 calc((100% - 2rem) / 2); /* 2 columns with 1 * 2rem gap */
                 max-width: calc((100% - 2rem) / 2);
             }
         }
 
-        /* For screens <= 320px (1 column) */
+        /* For screens <= 320px (Very small phones) - 1 column */
         @media (max-width: 320px) {
             .member-card {
-                flex: 1 1 100%; /* Force single column on extremely small screens */
+                flex: 1 1 100%; /* Force single column */
                 max-width: 100%;
             }
         }
@@ -1091,10 +1091,10 @@
                 max-width: 100%;
             }
 
-            .board-members-grid {
+            /* The board-members-grid gap is defined globally as 2rem, no need to override here */
+            /* .board-members-grid {
                 gap: 1rem;
-                /* Reduce gap between cards */
-            }
+            } */
 
             .member-card {
                 padding: 1rem;
