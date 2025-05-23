@@ -1048,6 +1048,24 @@
             }
         }
 
+        /* For larger mobile screens (e.g., tablets in portrait or larger phones) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .member-card {
+                flex: 1 1 calc((100% - 1rem) / 2); /* 2 columns with 1rem gap */
+                max-width: calc((100% - 1rem) / 2);
+            }
+        }
+
+        /* For smaller mobile screens (e.g., standard phones) */
+        @media (max-width: 480px) {
+            .member-card {
+                flex: 1 1 100%; /* Force single column on smaller screens */
+                max-width: 100%;
+            }
+        }
+
+
+        /* Common adjustments for all mobile breakpoints */
         @media (max-width: 768px) {
             section {
                 padding: 2rem 1rem;
@@ -1066,7 +1084,6 @@
                 max-width: 100%;
             }
 
-            /* Specific adjustments for board member cards on larger mobile (3 columns) */
             .board-members-grid {
                 gap: 1rem;
                 /* Reduce gap between cards */
@@ -1075,8 +1092,6 @@
             .member-card {
                 padding: 1rem;
                 /* Smaller padding for compact look */
-                flex: 1 1 calc((100% - 2rem) / 3); /* 3 columns with 1rem gap between them */
-                max-width: calc((100% - 2rem) / 3);
             }
 
             .member-card img {
@@ -1139,21 +1154,6 @@
             }
         }
 
-        /* New media query for very small phones (2 columns) */
-        @media (max-width: 480px) {
-            .member-card {
-                flex: 1 1 calc((100% - 1rem) / 2); /* 2 columns with 1rem gap between them */
-                max-width: calc((100% - 1rem) / 2);
-            }
-        }
-
-        /* New media query for extremely small phones (single column) */
-        @media (max-width: 320px) {
-            .member-card {
-                flex: 1 1 100%; /* Force single column on extremely small screens */
-                max-width: 100%;
-            }
-        }
 
         /* Specific adjustments for the "Join Our Family" section */
         .join-family {
