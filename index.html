@@ -1000,6 +1000,55 @@
         justify-content: center;
       }
     }
+
+    /* Specific adjustments for the "Join Our Family" section */
+    .join-family {
+      background-color: var(--primary); /* Use primary color for background */
+      color: white; /* White text for contrast */
+      padding: 6rem 2rem; /* Increased padding for more vertical space */
+      border-radius: 15px; /* More rounded corners */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+      margin-top: 4rem; /* Add more space above it */
+      margin-bottom: 4rem; /* Add more space below it */
+      display: flex; /* Use flexbox for centering content */
+      flex-direction: column; /* Stack children vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+    }
+
+    .join-family .section-title {
+      color: white; /* Ensure title is white */
+      margin-bottom: 1.5rem; /* Adjust margin */
+    }
+
+    .join-family .section-title::after {
+      background: var(--secondary); /* Use secondary color for underline */
+    }
+
+    .join-family p {
+      color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for paragraph */
+      max-width: 700px; /* Constrain paragraph width */
+      margin-bottom: 2.5rem; /* More space below paragraph */
+      font-size: 1.1rem; /* Slightly larger font size */
+      line-height: 1.8; /* Better line height for readability */
+    }
+
+    .join-family .cta-button {
+      background-image: linear-gradient(to right, var(--secondary) 0%, #FFB300 100%); /* Gold gradient for button */
+      color: var(--dark); /* Dark text for contrast on gold button */
+      font-size: 1.1rem; /* Larger font for button */
+      padding: 1rem 3rem; /* Larger padding for button */
+      border-radius: 50px; /* Fully rounded button */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger button shadow */
+      transition: all 0.3s ease;
+    }
+
+    .join-family .cta-button:hover {
+      background-position: right center;
+      background-image: linear-gradient(to right, #FFB300 0%, var(--secondary) 100%); /* Reverse gradient on hover */
+      transform: translateY(-5px) scale(1.05); /* More pronounced lift and scale */
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -1039,8 +1088,7 @@
       <p style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
         A student community under the patronage of the Institute of Electrical and Electronics Engineers (IEEE) International, we strive to empower the next generation of engineers.
       </p>
-      <a href="#about" class="cta-button pulse">Learn More</a>
-    </section>
+      </section>
 
     <section id="about" class="animate-on-scroll">
       <h2 class="section-title">About the Branch</h2>
@@ -1124,6 +1172,19 @@
                 <a href="#" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
+    </section>
+
+    <section class="join-family animate-on-scroll">
+        <h2 class="section-title">Join Our Family!</h2>
+        <p class="section-description">
+            Ready to be part of something amazing? Join the IEEE ET5 Student Branch and embark on a journey of learning, innovation, and community.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcIqeLsWzjTass0B4FG_al2j9G-aiB9lh56AFlAQwRJLIzfw/viewform?usp=sharing&ouid=114376634756437151602"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="cta-button pulse">
+            Apply Now!
+        </a>
     </section>
 
     <section id="contact-us" class="animate-on-scroll">
