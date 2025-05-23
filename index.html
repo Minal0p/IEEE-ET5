@@ -1066,7 +1066,7 @@
                 max-width: 100%;
             }
 
-            /* Specific adjustments for board member cards on mobile (3 columns) */
+            /* Specific adjustments for board member cards on larger mobile (3 columns) */
             .board-members-grid {
                 gap: 1rem;
                 /* Reduce gap between cards */
@@ -1075,8 +1075,8 @@
             .member-card {
                 padding: 1rem;
                 /* Smaller padding for compact look */
-                flex: 1 1 calc((100% - 2rem) / 3); /* Changed to 3 columns with correct gap calculation */
-                max-width: calc((100% - 2rem) / 3); /* Ensures they can shrink to fit 3 in a row */
+                flex: 1 1 calc((100% - 2rem) / 3); /* 3 columns with 1rem gap between them */
+                max-width: calc((100% - 2rem) / 3);
             }
 
             .member-card img {
@@ -1139,11 +1139,18 @@
             }
         }
 
-        /* New media query for very small phones (single column) */
-        @media (max-width: 550px) {
+        /* New media query for very small phones (2 columns) */
+        @media (max-width: 480px) {
             .member-card {
-                flex: 1 1 100%;
-                /* Force single column on very small screens */
+                flex: 1 1 calc((100% - 1rem) / 2); /* 2 columns with 1rem gap between them */
+                max-width: calc((100% - 1rem) / 2);
+            }
+        }
+
+        /* New media query for extremely small phones (single column) */
+        @media (max-width: 320px) {
+            .member-card {
+                flex: 1 1 100%; /* Force single column on extremely small screens */
                 max-width: 100%;
             }
         }
