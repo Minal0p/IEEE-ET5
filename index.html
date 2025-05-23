@@ -15,6 +15,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GA_MEASUREMENT_ID'); // Replace 'GA_MEASUREMENT_ID' with your actual Google Analytics Measurement ID
+  </script>
+
   <style>
     /* Root variables for consistent theming */
     :root {
@@ -543,52 +552,54 @@
 
     /* Call to Action Buttons */
     .cta-button {
-      background: var(--primary);
+      background: var(--primary); /* Fallback */
       color: white;
       border: none;
       padding: 0.8rem 2rem;
       border-radius: 50px;
       cursor: pointer;
       font-weight: bold;
-      transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Added transform and box-shadow to transition */
+      transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
       display: inline-block;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      position: relative; /* For pseudo-element hover effect */
-      overflow: hidden; /* Hide overflow for hover effect */
+      position: relative;
+      overflow: hidden;
       z-index: 1;
-    }
 
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.1); /* Light overlay */
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-out;
-      z-index: -1;
-    }
-
-    .cta-button:hover::before {
-      transform: translateX(0);
+      /* New: Gradient background */
+      background-image: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
+      background-size: 200% auto; /* For hover effect */
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Subtle text shadow */
     }
 
     .cta-button:hover {
-      background: var(--dark);
+      background-position: right center; /* Shift gradient on hover */
+      background-image: linear-gradient(to right, var(--dark) 0%, var(--primary) 100%); /* Darker gradient on hover */
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .cta-button.secondary {
-      background: var(--secondary);
-      color: var(--dark);
+    /* Specific styles for the "pulse" button (e.g., in Hero section) */
+    .cta-button.pulse {
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 0 0 rgba(0, 98, 155, 0.7); /* Initial pulse shadow */
+      animation: pulse-shadow 2s infinite;
     }
 
-    .cta-button.secondary:hover {
-      background: var(--primary);
-      color: white;
+    @keyframes pulse-shadow {
+      0% { box-shadow: 0 0 0 0 rgba(0, 98, 155, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 98, 155, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 98, 155, 0); }
+    }
+
+    /* Adjustments for the AI Helper buttons to ensure they look good */
+    .ai-helper-feature .cta-button {
+      margin-top: 1rem;
+      width: auto; /* Allow button to size naturally */
+      display: block; /* Make button full width of its container */
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 200px; /* Ensure a minimum width for consistency */
     }
 
     /* Contact Section */
@@ -1004,13 +1015,13 @@
       </div>
       <nav id="navMenu">
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#board-members">Board Team</a></li>
           <li><a href="#membership">Membership</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#resources">Resources</a></li>
-          <li><a href="#career-path-suggester">Career Path</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
           <li><a href="#contact-us">Contact Us</a></li>
         </ul>
       </nav>
@@ -1222,7 +1233,7 @@
       </div>
     </section>
 
-    <section id="career-path-suggester" class="animate-on-scroll">
+    <!-- <section id="career-path-suggester" class="animate-on-scroll">
       <h2 class="section-title">Discover Your Career Path</h2>
       <p style="text-align:center; margin-bottom: 2rem;">
         Enter your interests or areas that pique your curiosity, and we will suggest potential career paths and relevant IEEE fields.
@@ -1238,7 +1249,7 @@
         <div id="generatedCareerPath" style="margin-top: 1.5rem; padding: 1.5rem; background: var(--light); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left; display: none;">
           </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="contact-us" class="animate-on-scroll">
       <h2 class="section-title">Contact Us</h2>
@@ -1296,13 +1307,13 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#board-members">Board Team</a></li>
           <li><a href="#membership">Membership</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#resources">Resources</a></li>
-          <li><a href="#career-path-suggester">Career Path</a></li>
+          <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
           <li><a href="#contact-us">Contact Us</a></li>
         </ul>
       </div>
@@ -1379,6 +1390,11 @@
 
     // Smooth Scroll to Anchors for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      // Exclude external links from smooth scrolling
+      if (anchor.getAttribute('href').startsWith('http') || anchor.getAttribute('href').startsWith('https')) {
+        return; // Skip smooth scroll for external links
+      }
+
       anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
 
@@ -1526,68 +1542,6 @@
           console.error('Error calling Gemini API:', error);
         } finally {
           loadingIndicator.style.display = 'none'; // Hide loading indicator
-        }
-      });
-    }
-
-    // Gemini API Integration for Career Path Suggester
-    const suggestCareerPathBtn = document.getElementById('suggestCareerPathBtn');
-    const interestsInput = document.getElementById('interestsInput');
-    const careerLoadingIndicator = document.getElementById('careerLoadingIndicator');
-    const generatedCareerPathDiv = document.getElementById('generatedCareerPath');
-
-    if (suggestCareerPathBtn) {
-      suggestCareerPathBtn.addEventListener('click', async function() {
-        const interests = interestsInput.value.trim();
-        if (!interests) {
-          alert('Please enter your interests to suggest a career path.');
-          return;
-        }
-
-        careerLoadingIndicator.style.display = 'block';
-        generatedCareerPathDiv.style.display = 'none'; // Hide display div during processing
-        generatedCareerPathDiv.innerHTML = ''; // Clear previous content
-
-        const prompt = `Based on the following interests: "${interests}", suggest 3-5 career paths in engineering and technology fields, and mention relevant IEEE areas for each path. Provide a title for each path and a brief description (2-3 sentences) in English.`;
-        let chatHistory = [];
-        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-        const payload = { contents: chatHistory };
-        const apiKey = ""; // Canvas will automatically provide the API key at runtime
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-        try {
-          const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-
-          const result = await response.json();
-          let generatedText = '';
-
-          if (result.candidates && result.candidates.length > 0 &&
-              result.candidates[0].content && result.candidates[0].content.parts &&
-              result.candidates[0].content.parts.length > 0) {
-            generatedText = result.candidates[0].content.parts[0].text;
-            // Display the generated text for the user to see
-            generatedCareerPathDiv.innerHTML = `<h3>Suggested Career Paths:</h3><p>${generatedText}</p>`;
-            generatedCareerPathDiv.style.display = 'block';
-
-            // Removed the backend email sending simulation and related messages
-            // as per the user's request to remove email functionality.
-
-          } else {
-            generatedCareerPathDiv.innerHTML = `<p style="color: var(--error);">Sorry, I couldn't generate career path suggestions. Please try again.</p>`;
-            generatedCareerPathDiv.style.display = 'block';
-            console.error('Gemini API response structure unexpected:', result);
-          }
-        } catch (error) {
-          generatedCareerPathDiv.innerHTML = `<p style="color: var(--error);">An error occurred while generating suggestions: ${error.message}</p>`;
-          generatedCareerPathDiv.style.display = 'block';
-          console.error('Error calling Gemini API for career path:', error);
-        } finally {
-          careerLoadingIndicator.style.display = 'none'; // Hide loading indicator
         }
       });
     }
