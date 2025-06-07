@@ -9,6 +9,7 @@
     <meta property="og:description" content="Official website of the IEEE ET5 Student Branch at the Institute of Engineering and Technology, Fifth Settlement. Discover our events, educational, and technical resources.">
     <meta property="og:image" content="https://www.ieee.org/content/dam/ieee-web/standards/images/logo.svg ">
     <meta property="og:url" content="https://yourwebsite.com ">
+    <meta name="twitter:card" content="summary_large_image">
     <title>IEEE ET5 Student Branch</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
@@ -237,26 +238,22 @@
         }
 
         main {
-            padding: 2rem 1rem;
-            /* Re-added padding for main content */
-            max-width: 1200px;
-            /* Re-added max-width for main content */
-            margin: auto;
-            /* Centered main content */
+            padding: 0; /* Remove padding from main to allow sections to span full width */
+            max-width: 100%; /* Make main take full width */
+            margin: 0; /* Remove margin from main */
             position: relative;
             z-index: 2;
             background-color: transparent;
         }
 
         section {
-            padding: 4rem 2rem;
+            padding: 4rem 2rem; /* Keep existing padding for content inside sections */
             direction: ltr;
             text-align: center;
             position: relative;
             z-index: 2;
             background-color: white;
-            border-radius: 10px;
-            /* Re-added border-radius for sections */
+            border-radius: 0; /* Remove border-radius for full width sections */
             margin-bottom: 2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
@@ -273,8 +270,7 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
-            border-radius: 10px;
-            /* Re-added border-radius for hero */
+            border-radius: 0; /* Remove border-radius for full width */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
@@ -356,12 +352,9 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
-            max-width: 1200px;
-            /* Keep max-width for content inside sections */
-            margin-left: auto;
-            /* Center content inside sections */
-            margin-right: auto;
-            /* Center content inside sections */
+            max-width: 1200px; /* Keep max-width for content inside sections */
+            margin-left: auto; /* Center content inside sections */
+            margin-right: auto; /* Center content inside sections */
         }
 
         .about-card,
@@ -574,6 +567,12 @@
             font-size: 1rem;
         }
 
+        .member-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
         /* Styles for social link icons when placed below */
         .member-social-links {
             margin-top: 10px;
@@ -594,6 +593,10 @@
 
         .member-social-links a.linkedin-icon {
             color: #0a66c2;
+        }
+        
+        .member-social-links a.whatsapp-icon {
+            color: #25D366;
         }
 
         .member-social-links a:hover {
@@ -675,7 +678,7 @@
             align-items: stretch;
         }
 
-        .contact-method {
+        .contact-method, .contact-form-link {
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -705,63 +708,20 @@
             margin-bottom: 1.5rem;
         }
 
-        .contact-form {
+        .contact-form-link {
             flex: 1 1 400px;
             max-width: 500px;
             background: var(--light);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: left;
         }
+        
+         .contact-form-link h3 {
+             color: var(--dark);
+             margin-bottom: 1rem;
+         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: var(--dark);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            direction: ltr;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 98, 155, 0.2);
-        }
-
-        .submit-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .submit-btn:hover {
-            background: var(--dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-        }
 
         /* Google Map Styling */
         .map-container {
@@ -937,68 +897,7 @@
                 background-position: 100% 100%;
             }
         }
-
-        /* Custom Modal for Form Submission */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 2rem;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            position: relative;
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        .close-button {
-            color: #aaa;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-button:hover,
-        .close-button:focus {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .modal-content h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .modal-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-content .cta-button {
-            width: auto;
-            padding: 0.6rem 1.5rem;
-        }
-
+        
         /* NoScript Warning */
         noscript {
             display: block;
@@ -1035,29 +934,12 @@
                 align-items: center;
             }
 
-            .contact-form,
+            .contact-form-link,
             .map-container {
                 max-width: 100%;
             }
         }
 
-        /* For screens between 321px and 768px (Standard phones and larger) - 3 columns */
-        @media (min-width: 321px) and (max-width: 768px) {
-            .member-card {
-                flex: 1 1 calc((100% - 4rem) / 3); /* 3 columns with 2 * 2rem gaps */
-                max-width: calc((100% - 4rem) / 3);
-            }
-        }
-
-        /* For screens <= 320px (Very small phones) - 1 column */
-        @media (max-width: 320px) {
-            .member-card {
-                flex: 1 1 100%; /* Force single column */
-                max-width: 100%;
-            }
-        }
-
-        /* Common adjustments for all mobile breakpoints */
         @media (max-width: 768px) {
             section {
                 padding: 2rem 1rem;
@@ -1076,37 +958,44 @@
                 max-width: 100%;
             }
 
-            /* The board-members-grid gap is defined globally as 2rem, no need to override here */
-            /* .board-members-grid {
+            /* Specific adjustments for board member cards on small screens */
+            .board-members-grid {
                 gap: 1rem;
-            } */
+            }
 
             .member-card {
-                padding: 0.75rem; /* Adjusted padding for compact look */
+                padding: 1rem;
+                flex: 1 1 100%;
+                max-width: 100%;
             }
 
             .member-card img {
-                width: 70px; /* Adjusted image size */
-                height: 70px; /* Adjusted image size */
-                margin-bottom: 0.6rem; /* Reduced margin */
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0.8rem;
             }
 
             .member-card h3 {
-                font-size: 0.85rem; /* Further adjusted font size for name to be smaller */
-                line-height: 1.2; /* Ensure name fits in two lines if needed */
+                font-size: 1.3rem;
             }
 
             .member-role {
-                font-size: 0.6rem; /* Further adjusted font size for role to be smaller */
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .member-description {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
             }
 
             .member-social-links {
-                margin-top: 6px; /* Reduced margin */
-                gap: 8px; /* Reduced gap between icons */
+                margin-top: 8px;
+                gap: 10px;
             }
 
             .member-social-links a {
-                font-size: 1em; /* Smaller icon size */
+                font-size: 1.2em;
             }
 
 
@@ -1130,14 +1019,12 @@
             }
         }
 
-
         /* Specific adjustments for the "Join Our Family" section */
         .join-family {
             background-color: var(--primary);
             color: white;
             padding: 6rem 2rem;
-            border-radius: 15px;
-            /* Re-added border-radius for join-family section */
+            border-radius: 0; /* Remove border-radius for full width */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin-top: 4rem;
             margin-bottom: 4rem;
@@ -1203,8 +1090,7 @@
                     <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#board-members">Board Team</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/">Our Family</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li> <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Ai/">AI Helper</a></li>
@@ -1251,79 +1137,93 @@
         </section>
 
         <section id="board-members" class="animate-on-scroll">
-            <h2 class="section-title">Board Team</h2>
+            <h2 class="section-title">Officers</h2>
             <p style="text-align:center; margin-bottom: 2rem;">
                 Meet the members of our student branch board who lead our efforts towards excellence and innovation.
             </p>
             <div class="board-members-grid">
                 <div class="member-card animate-on-scroll">
-                      <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Mena%20Philip%20(1).png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFD100/003865?text=Chairman';" alt="صورة رئيس مجلس الإدارة" loading="lazy">
-                                <h3>Mena Philip<span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                                <p>Chairman</p>
-                            </div>
-                            <div class="member-social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100004623032980" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Mena Philip"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/in/mena-philip-766454340/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Mena Philip"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Mena Philip on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        </div>
+                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Mena%20Philip%20(1).png" alt="Mena Philip Photo" loading="lazy">
+                    <h3>Mena Philip</h3>
+                    <p class="member-role">Chairman</p>
+                    <p class="member-description">
+                        Guides the branch with a clear vision and dedication to empower our members.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100004623032980" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Mena Philip"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/mena-philip-766454340/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Mena Philip"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Mena Philip on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="member-card animate-on-scroll">
-                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Dina%20Rostom.jpg" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFD100/003865?text=Consular';" alt="صورة المستشار" loading="lazy">
-                            <h3>Dina Rostom <span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                            <p>Branch Consular</p>
-                        </div>
-                        <div class="member-social-links">
-                            <a href="https://www.facebook.com/dina.zaki.58" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Dina Rostom"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/in/dina-rostom-b5980b257?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD9NYLUB-VspTGfD7YVDUb2xvZr-16E4lqs&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B97Q1fV3HRvupVFc%2F%2B51wsg%3D%3D" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Dina Rostom"><i class="fab fa-linkedin-in"></i></a>
-                             </div>
+                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Dina%20Rostom.jpg" alt="Dina Rostom Photo" loading="lazy">
+                    <h3>Dina Rostom</h3>
+                    <p class="member-role">Branch Consular</p>
+                    <p class="member-description">
+                        Provides invaluable guidance and support to ensure the branch's continued success.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/dina.zaki.58" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Dina Rostom"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/dina-rostom-b5980b257?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD9NYLUB-VspTGfD7YVDUb2xvZr-16E4lqs&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B97Q1fV3HRvupVFc%2F%2B51wsg%3D%3D" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Dina Rostom"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="member-card animate-on-scroll">
-                     <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Omar%20Ramady.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFD100/003865?text=Vice+Chairman';" alt="صورة نائب رئيس مجلس الإدارة" loading="lazy">
-                                <h3>Omar Alramady<span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                                <p>Vice Chairman Technical</p>
-                            </div>
-                            <div class="member-social-links">
-                                <a href="https://www.facebook.com/omar.al.ramady.2025/" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Omar Alramady"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/in/omar-al-ramady-3a2022206/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Omar Alramady"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Omar Alramady on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            </div>
+                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Omar%20Ramady.png" alt="Omar Alramady Photo" loading="lazy">
+                    <h3>Omar Alramady</h3>
+                    <p class="member-role">Vice Chairman Technical</p>
+                    <p class="member-description">
+                        Leads our technical initiatives and workshops with expertise and passion.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/omar.al.ramady.2025/" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Omar Alramady"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/omar-al-ramady-3a2022206/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Omar Alramady"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Omar Alramady on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="member-card animate-on-scroll">
-                   <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/personal-image//Mina%20Hanna.png" alt="صورة السكرتير" loading="lazy">
-                                <h3>Mina Hanna <span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                                <p>Secretary</p>
-                            </div>
-                            <div class="member-social-links">
-                                <a href="https://www.facebook.com/Eng.Mina.H.F" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Mina Hanna"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/in/engminahanna/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Mina Hanna"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Mina Hanna on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            </div>
+                     <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Osama%20Ahmed.jpg" alt="Osama Ahmed Photo" loading="lazy">
+                    <h3>Osama Ahmed</h3>
+                    <p class="member-role">Vice Chairman Non-Technical</p>
+                    <p class="member-description">
+                        Organizes and manages the non-technical aspects and events of the branch.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/osama.ahmed.902230" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Osama Ahmed"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Osama Ahmed"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/+201033627952" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Osama Ahmed on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="member-card animate-on-scroll">
-                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Osama%20Ahmed.jpg" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFD100/003865?text=Vice+Chairman';" alt="صورة نائب رئيس مجلس الإدارة" loading="lazy">
-                                <h3>Osama Ahmed<span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                                <p>Vice Chairman Non-Technical</p>
-                            </div>
-                            <div class="member-social-links">
-                                <a href="https://www.facebook.com/osama.ahmed.902230" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Osama Ahmed"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Osama Ahmed"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/+201033627952" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Osama Ahmed on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            </div>
+                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/personal-image//Mina%20Hanna.png" alt="Mina Hanna Photo" loading="lazy">
+                    <h3>Mina Hanna</h3>
+                    <p class="member-role">Secretary</p>
+                    <p class="member-description">
+                        Ensures smooth communication and organization within the branch.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/Eng.Mina.H.F" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Mina Hanna"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/engminahanna/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Mina Hanna"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/201203006152" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Mina Hanna on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
+                
                 <div class="member-card animate-on-scroll">
-                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Khaled%20Morsy.jpg" alt="صورة أمين الصندوق" loading="lazy">
-                                <h3>Khaled Morsy<span class="membership-badge">Membership <i class="fas fa-star star-icon"></i></span></h3>
-                                <p>Treasurer</p>
-                            </div>
-                            <div class="member-social-links">
-                                <a href="https://www.facebook.com/Khaled.morsy6/" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Khaled Morsy"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/in/khaled-aboelsoud-249950263/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Khaled Morsy"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/201093504881" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Khaled Morsy on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            </div>
+                    <img src="https://uzcrjhhvwgllsdsvftuj.supabase.co/storage/v1/object/public/ieee-members/officers/Khaled%20Morsy.jpg" alt="Khaled Morsy Photo" loading="lazy">
+                    <h3>Khaled Morsy</h3>
+                    <p class="member-role">Treasurer</p>
+                    <p class="member-description">
+                        Manages the branch's financial affairs with integrity and precision.
+                    </p>
+                    <div class="member-social-links">
+                        <a href="https://www.facebook.com/Khaled.morsy6/" target="_blank" rel="noopener noreferrer" class="facebook-icon" aria-label="Facebook Profile for Khaled Morsy"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/khaled-aboelsoud-249950263/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn Profile for Khaled Morsy"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/201093504881" target="_blank" rel="noopener noreferrer" class="whatsapp-icon" aria-label="Contact Khaled Morsy on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
+                
             </div>
             <div style="margin-top: 3rem; text-align: center;">
-                <a href="https://minal0p.github.io/IEEE-ET5-Our-Family/" class="cta-button">
+                <a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family" class="cta-button">
                     Know Our Family
                 </a>
             </div>
@@ -1364,24 +1264,10 @@
                     <p>New Cairo Academy, Fifth Settlement</p>
                 </div>
 
-                <div class="contact-form animate-on-scroll">
+                <div class="contact-form-link animate-on-scroll">
                     <h3>Message Us</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required placeholder="example@domain.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="4" required
-                                placeholder="Write your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                     <p>Have a question or a suggestion? We'd love to hear from you!</p>
+                    <a href="https://forms.gle/ct2baoYAsN33xPpJ7" target="_blank" rel="noopener noreferrer" class="cta-button">Contact Us Form</a>
                 </div>
 
                 <div class="map-container animate-on-scroll">
@@ -1401,7 +1287,7 @@
                     <li><a href="https://minal0p.github.io/IEEE-ET5/">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#board-members">Board Team</a></li>
-                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/">Our Family</a></li>
+                    <li><a href="https://minal0p.github.io/IEEE-ET5-Our-Family/#our-family">Our Family</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Membership/">Membership</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Events/">Events</a></li>
                     <li><a href="https://minal0p.github.io/IEEE-ET5-Resources/">Resources</a></li>
@@ -1431,15 +1317,6 @@
             © 2025 IEEE ET5 Student Branch. All rights reserved.
         </div>
     </footer>
-
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <h3>Success!</h3>
-            <p>Thank you for contacting us. We will get back to you as soon as possible.</p>
-            <button class="cta-button" id="modalCloseButton">Okay</button>
-        </div>
-    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -1524,137 +1401,6 @@
                 ctaButton.classList.toggle('pulse');
             }, 2000);
         }
-
-        // Contact Form Submission and Custom Modal
-        const contactForm = document.getElementById('contactForm');
-        const successModal = document.getElementById('successModal');
-        const closeButton = document.querySelector('.close-button');
-        const modalCloseButton = document.getElementById('modalCloseButton');
-
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent default form submission
-
-                // Basic form validation
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-
-                if (name === '' || email === '' || message === '') {
-                    // Using a custom modal for errors would be better here too,
-                    // but for simplicity, keeping alert for validation for now.
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-
-                // Simple email validation regex
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-
-                // Simulate form submission (e.g., send data to a server)
-                console.log('Form Submitted:', {
-                    name,
-                    email,
-                    message
-                });
-
-                // Show the custom success modal
-                successModal.style.display = 'flex'; // Use flex to center content
-
-                // Reset the form after successful submission
-                this.reset();
-            });
-        }
-
-        // Close modal when close button (x) is clicked
-        if (closeButton) {
-            closeButton.addEventListener('click', function() {
-                successModal.style.display = 'none';
-            });
-        }
-
-        // Close modal when "Okay" button is clicked
-        if (modalCloseButton) {
-            modalCloseButton.addEventListener('click', function() {
-                successModal.style.display = 'none';
-            });
-        }
-
-        // Close modal when clicking outside of the modal content
-        if (successModal) {
-            window.addEventListener('click', function(event) {
-                if (event.target == successModal) {
-                    successModal.style.display = 'none';
-                }
-            });
-        }
-
-        // Gemini API Integration for Event Idea Generation
-        const generateEventIdeaBtn = document.getElementById('generateEventIdeaBtn');
-        const loadingIndicator = document.getElementById('loadingIndicator');
-        const generatedEventIdeaDiv = document.getElementById('generatedEventIdea');
-
-        if (generateEventIdeaBtn) {
-            generateEventIdeaBtn.addEventListener('click', async function() {
-                // Show loading indicator and clear previous idea
-                loadingIndicator.style.display = 'block';
-                generatedEventIdeaDiv.style.display = 'none';
-                generatedEventIdeaDiv.innerHTML = ''; // Clear previous content
-
-                const prompt = "Suggest a creative and relevant event idea for an IEEE student branch, focusing on technology, engineering, or professional development. Provide an attractive title and a brief description (2-3 sentences) in English.";
-                let chatHistory = [];
-                chatHistory.push({
-                    role: "user",
-                    parts: [{
-                        text: prompt
-                    }]
-                });
-
-                const payload = {
-                    contents: chatHistory
-                };
-                const apiKey = ""; // Canvas will automatically provide the API key at runtime
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(payload)
-                    });
-
-                    const result = await response.json();
-
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        const text = result.candidates[0].content.parts[0].text;
-                        generatedEventIdeaDiv.innerHTML = `<h3>Suggested Event Idea:</h3><p>${text}</p>`;
-                        generatedEventIdeaDiv.style.display = 'block';
-                    } else {
-                        generatedEventIdeaDiv.innerHTML = `<p style="color: var(--error);">Sorry, I couldn't generate an event idea. Please try again.</p>`;
-                        generatedEventIdeaDiv.style.display = 'block';
-                        console.error('Gemini API response structure unexpected:', result);
-                    }
-                } catch (error) {
-                    generatedEventIdeaDiv.innerHTML = `<p style="color: var(--error);">An error occurred while generating the idea: ${error.message}</p>`;
-                    generatedEventIdeaDiv.style.display = 'block';
-                    console.error('Error calling Gemini API:', error);
-                } finally {
-                    loadingIndicator.style.display = 'none'; // Hide loading indicator
-                }
-            });
-        }
-
-        // Gemini API Integration for Career Path Suggester (Removed functionality)
-        // The section with id="career-path-suggester" is commented out in the HTML.
-        // Therefore, the JavaScript related to it is no longer needed or will not execute.
-        // Keeping the code commented out here for reference, but it's effectively removed.
     </script>
 </body>
 
